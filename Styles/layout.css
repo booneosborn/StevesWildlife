@@ -1,0 +1,79 @@
+﻿*{ margin: 0px;padding: 0px;}
+body {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: url(../Images/Skin/background2.jpg) repeat;
+}
+#Container {
+    position: relative; /* needed for stacking */
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+section {
+    width: 800px;
+    margin: auto;
+    overflow: hidden;
+    height: 610px;
+}
+
+/*Region Header*/
+header {
+    position: absolute;
+    top: 0px;
+    left: 2px;
+    text-align: left;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+header .sub {
+    font-size: 10px;
+}
+/*End Region Header*/
+
+/*Region Nav*/
+nav {
+    color: #ffffff;
+    font-weight: bold;
+    text-align: right;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+nav a {text-decoration: none; color: #fff;}
+li {
+    list-style: none;
+    display: inline-block;
+    padding: 10px 10px;
+}
+/*End Region Nav*/
+
+/*Region Footer*/
+footer {
+    position: relative; /* needed for stacking */
+    bottom: 0px;
+    z-index: 600;
+    color: #ffffff;
+    text-align: left;
+    width: 100%;
+    font-size: 11px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+/*End Region Footer*/
+
+#bizCard{
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    z-index: 333;
+    -moz-box-shadow: 0 0 30px 5px #000000;
+    -webkit-box-shadow: 0px 0px 30px 5px #000000; /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
+    box-shadow: 0px 0px 30px 5px #000000; /* Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+ */
+    border-radius: 10px;
+    display: none;
+}
