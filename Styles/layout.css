@@ -12,10 +12,9 @@ body {
 }
 
 section {
-    width: 800px;
+    width: 100%;
     margin: auto;
-    overflow: hidden;
-    height: 610px;
+    margin-bottom: 50px;
 }
 
 /*Region Header*/
@@ -49,12 +48,25 @@ li {
     list-style: none;
     display: inline-block;
     padding: 10px 10px;
+    width:10%;
+    min-width:95px;
+    -webkit-transition: all 0.75s ease;
+    -moz-transition: all 0.75s ease;
+    -o-transition: all 0.75s ease;
+    transition: all 0.75s ease;
+}
+li img{
+    width:100%;
+}
+li.active{
+    width:400px;
+    height:167px;
 }
 /*End Region Nav*/
 
 /*Region Footer*/
 footer {
-    position: relative; /* needed for stacking */
+    position: fixed;
     bottom: 0px;
     z-index: 600;
     color: #ffffff;
@@ -63,6 +75,7 @@ footer {
     font-size: 11px;
     padding: 5px;
     box-sizing: border-box;
+    background: #000;
 }
 /*End Region Footer*/
 
@@ -76,4 +89,10 @@ footer {
     box-shadow: 0px 0px 30px 5px #000000; /* Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+ */
     border-radius: 10px;
     display: none;
+}
+
+@media (max-width: 400px) {
+li.active{
+    width: 100%;
+  }
 }
