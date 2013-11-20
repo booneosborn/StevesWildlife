@@ -48,7 +48,7 @@ li {
     list-style: none;
     display: inline-block;
     padding: 10px 10px;
-    width:10%;
+    width:20%;
     min-width:95px;
     -webkit-transition: all 0.75s ease;
     -moz-transition: all 0.75s ease;
