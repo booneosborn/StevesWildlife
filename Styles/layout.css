@@ -57,6 +57,7 @@ li {
 }
 li img{
     width:100%;
+    cursor:pointer;
 }
 li.active{
     width:400px;
