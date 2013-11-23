@@ -15,97 +15,30 @@
         <br/>
         <span class="sub">Idaho Wildlife Photography and Custom Framing</span>
     </header>
-        <nav>
-            <ul id="navigation">
-                <li><a href="javascript://" onclick="showContact()">Contact</a></li>
+    <nav>
+        <ul id="navigation">
+            <li><a href="javascript://">Contact</a></li>
+        </ul>
+        <img src="Images/Skin/bizCard.jpg" id="bizCard" />
+    </nav>
+
+    <div class="wrapper">
+        <div id="dd" class="wrapper-dropdown" tabindex="1">
+            <span>Category</span>
+            <ul class="dropdown" data-bind="foreach: categories">
+                <li><a href="#" data-bind="text: value, click: $root.SelectCategory"></a></li>
             </ul>
-            <img src="Images/Skin/bizCard.jpg" id="bizCard" />
-        </nav>
+        </div>
+    ​</div>
     <section id="gallery">
-        <ul>
-    		<li><img src="Images/deer1.jpg" /></li>
-    		<li><img src="Images/deer2.jpg" /></li>
-    		<li><img src="Images/deer3.jpg" /></li>
-    		<li><img src="Images/deer4.jpg" /></li>
-            <li><img src="Images/deer5.jpg" /></li>
-            <li><img src="Images/deer6.jpg" /></li>
-            <li><img src="Images/deer7.jpg" /></li>
-            <li><img src="Images/deer8.jpg" /></li>
-            <li><img src="Images/deer9.jpg" /></li>
-            <li><img src="Images/deer10.jpg" /></li>
-            <li><img src="Images/deer11.jpg" /></li>
-            <li><img src="Images/deer12.jpg" /></li>
-            <li><img src="Images/deer13.jpg" /></li>
-            <li><img src="Images/deer14.jpg" /></li>
-            <li><img src="Images/deer15.jpg" /></li>
-            <li><img src="Images/deer16.jpg" /></li>
-            <li><img src="Images/deer17.jpg" /></li>
-            <li><img src="Images/deer18.jpg" /></li>
-            <li><img src="Images/deer19.jpg" /></li>
-            <li><img src="Images/deer20.jpg" /></li>
-            <li><img src="Images/deer21.jpg" /></li>
-            <li><img src="Images/deer22.jpg" /></li>
-            <li><img src="Images/deer23.jpg" /></li>
-            <li><img src="Images/deer24.jpg" /></li>
-            <li><img src="Images/deer25.jpg" /></li>
-            <li><img src="Images/deer26.jpg" /></li>
-            <li><img src="Images/horses1.jpg" /></li>
-            <li><img src="Images/horses2.jpg" /></li>
-            <li><img src="Images/horses3.jpg" /></li>
-            <li><img src="Images/horses4.jpg" /></li>
-            <li><img src="Images/elk1.jpg" /></li>
-            <li><img src="Images/elk2.jpg" /></li>
-            <li><img src="Images/elk3.jpg" /></li>
-            <li><img src="Images/elk4.jpg" /></li>
-            <li><img src="Images/elk5.jpg" /></li>
-            <li><img src="Images/elk6.jpg" /></li>
-            <li><img src="Images/elk7.jpg" /></li>
-            <li><img src="Images/elk8.jpg" /></li>
-            <li><img src="Images/elk9.jpg" /></li>
-            <li><img src="Images/elk10.jpg" /></li>
-            <li><img src="Images/elk11.jpg" /></li>
-            <li><img src="Images/elk12.jpg" /></li>
-            <li><img src="Images/elk13.jpg" /></li>
-            <li><img src="Images/elk14.jpg" /></li>
-            <li><img src="Images/elk15.jpg" /></li>
-            <li><img src="Images/elk16.jpg" /></li>
-            <li><img src="Images/elk17.jpg" /></li>
-            <li><img src="Images/bird1.jpg" /></li>
-            <li><img src="Images/bird2.jpg" /></li>
-            <li><img src="Images/bird3.jpg" /></li>
-            <li><img src="Images/bird4.jpg" /></li>
-            <li><img src="Images/bird5.jpg" /></li>
-            <li><img src="Images/bird6.jpg" /></li>
-            <li><img src="Images/bird7.jpg" /></li>
-            <li><img src="Images/bird8.jpg" /></li>
-            <li><img src="Images/bird9.jpg" /></li>
-            <li><img src="Images/bird10.jpg" /></li>
-            <li><img src="Images/bird11.jpg" /></li>
-            <li><img src="Images/bird12.jpg" /></li>
-            <li><img src="Images/bird13.jpg" /></li>
-            <li><img src="Images/butterfly1.jpg" /></li>
-            <li><img src="Images/scenery1.jpg" /></li>
-            <li><img src="Images/scenery2.jpg" /></li>
-            <li><img src="Images/scenery3.jpg" /></li>
-            <li><img src="Images/scenery4.jpg" /></li>
-            <li><img src="Images/scenery5.jpg" /></li>
-            <li><img src="Images/scenery6.jpg" /></li>
-            <li><img src="Images/scenery7.jpg" /></li>
-            <li><img src="Images/scenery8.jpg" /></li>
-            <li><img src="Images/scenery9.jpg" /></li>
-            <li><img src="Images/scenery10.jpg" /></li>
-            <li><img src="Images/scenery11.jpg" /></li>
-            <li><img src="Images/pheasant1.jpg" /></li>
-            <li><img src="Images/pheasant2.jpg" /></li>
-            <li><img src="Images/porcupine1.jpg" /></li>
-            <li><img src="Images/racoon1.jpg" /></li>
-            <li><img src="Images/sheep1.jpg" /></li>
-            <li><img src="Images/rabbit1.jpg" /></li>
-            <li><img src="Images/knives.jpg" /></li>
-            <li><img src="Images/lamp1.png" /></li>
-            <li><img src="Images/elk1.png" /></li>
-            <li><img src="Images/mount1.png" /></li>
-	</ul>
+        <ul data-bind="foreach: filteredImages">
+            <li>
+                <img data-bind="attr: {src: src, title: desc }" />
+                <div>
+                    <span data-bind="text: desc"></span> ($<span data-bind="text: price"></span>)
+                </div>
+            </li>
+	   </ul>
     </section>
 </div>
     <footer>
@@ -121,17 +54,8 @@
 
 <!-- First, add jQuery (and jQuery UI if using custom easing or animation -->
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-
-        <script type="text/javascript">
-            function showContact () {
-                $("#bizCard").fadeToggle();
-            }
-            $(function() {
-                $('section#gallery ul li').click(function(){
-                    $('section#gallery ul li').removeClass('active');
-                    $(this).addClass('active');
-                });
-            });
-        </script>
+        <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js"></script>
+        <script type="text/javascript" src="Scripts/vendor.js"></script>
+        <script type="text/javascript" src="Scripts/main.js"></script>
     </body>
 </html>
