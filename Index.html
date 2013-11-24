@@ -33,7 +33,7 @@
     <section id="gallery">
         <ul data-bind="foreach: filteredImages">
             <li>
-                <img data-bind="attr: {src: src, title: desc }" />
+                <img data-bind="attr: {src: src, title: desc }, click: $root.ImageClick" />
                 <div>
                     <span data-bind="text: desc"></span> ($<span data-bind="text: price"></span>)
                 </div>

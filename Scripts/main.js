@@ -33,9 +33,16 @@
 			vm.filteredImages(_.filter(vm.images(), function(it){return it.category === vm._selectedCategory() || vm._selectedCategory() === 'All';	}));
 		};
 
+		vm.ImageClick = function(image, event)
+		{
+	        $('section#gallery ul li img').removeClass('active');
+	        $(event.target).addClass('active');
+		}
+
 		vm.getImages = function(){
 			if(vm.images)
 			{
+		        console.log('data');
 				$.get('Scripts/images.xml', function(xml){ 
 					var json = $.xml2json(xml);
 					var mapped = $.map(json['Image'], function(it){
@@ -43,11 +50,6 @@
 					});
 					vm.images(mapped);
 					vm.filteredImages(mapped);
-
-				    $('section#gallery ul li').click(function(){
-				        $('section#gallery ul li').removeClass('active');
-				        $(this).addClass('active');
-				    });
 				});
 			}
 		};

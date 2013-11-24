@@ -48,13 +48,7 @@ nav a {text-decoration: none; color: #fff;}
     list-style: none;
     display: inline-block;
     padding: 10px 10px;
-    width:20%;
-    min-width:95px;
-    max-width: 400px;
-    -webkit-transition: all 0.75s ease;
-    -moz-transition: all 0.75s ease;
-    -o-transition: all 0.75s ease;
-    transition: all 0.75s ease;
+    width:auto;
 }
     #gallery li div {
         position: relative;
@@ -74,12 +68,19 @@ nav a {text-decoration: none; color: #fff;}
         opacity: .7;
     }
     #gallery li img{
-        width:100%;
+        width:200px;
+        height:134px;
+        min-width:95px;
+        max-width: 400px;
         cursor:pointer;
+        -webkit-transition: all 0.75s ease;
+        -moz-transition: all 0.75s ease;
+        -o-transition: all 0.75s ease;
+        transition: all 0.75s ease;
     }
-    #gallery li.active{
+    #gallery li img.active{
         width:400px;
-        height:167px;
+        height:267px;
     }
 /*End Region Nav*/
 
@@ -132,7 +133,7 @@ footer {
 .wrapper-dropdown {
     /* Size and position */
     position: relative;
-    width: 200px;
+    width: 150px;
     margin: 0 auto;
     padding:2px;
 
